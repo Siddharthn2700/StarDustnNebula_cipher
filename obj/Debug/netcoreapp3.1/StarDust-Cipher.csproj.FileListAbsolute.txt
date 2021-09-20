@@ -1,0 +1,13 @@
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.csproj.AssemblyReference.cache
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.AssemblyInfoInputs.cache
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.AssemblyInfo.cs
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.csproj.CoreCompileInputs.cache
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.exe
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.deps.json
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.runtimeconfig.json
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.runtimeconfig.dev.json
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.dll
+C:\coding\C#\StarDust-Cipher\bin\Debug\netcoreapp3.1\StarDust-Cipher.pdb
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.dll
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.pdb
+C:\coding\C#\StarDust-Cipher\obj\Debug\netcoreapp3.1\StarDust-Cipher.genruntimeconfig.cache

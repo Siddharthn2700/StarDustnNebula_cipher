@@ -181,192 +181,194 @@ namespace cipher
 
             }
             return tobereturned2;
-            static object Encoder(int response2 = 1)
+            
+           
+        }
+        static object Decoder(int n = 2)
+        {
+
+            Console.WriteLine("what is the sentence you want to decode");
+
+            string decode = Console.ReadLine();
+            string decodersplit = " ";
+            char[] therealthing = { ' ' };
+            int masti = 0;
+            int masti2 = 0;
+            int masti3 = 0;
+            int helper2 = 0;
+            int helper = 0;
+            char namaste = ' ';
+            StringBuilder sb2 = new StringBuilder();
+            for (int i = 0; i < decode.Length; i++)
             {
-                Console.WriteLine("what is the sentence you want to encode");
+                decodersplit = decode.Substring(helper, 3);
+                therealthing = decodersplit.ToCharArray();
+                masti = Converter2(therealthing[2]);
+                masti2 = therealthing[1];
+                masti3 = therealthing[3];
+                helper2 = masti * masti2 + masti3;
+                namaste = Converter(27 + i - helper2);
+                sb2.Append(namaste);
+                helper += 3;
+            }
+            return sb2;
+        }
+        static object Encoder(int response2 = 1)
+        {
+            Console.WriteLine("what is the sentence you want to encode");
 
-                string encode = Console.ReadLine();
-                string encode3 = encode.ToLower();
-                int length_of_encode = encode3.Length;
-                char[] encode2 = encode3.ToCharArray();
-                Random rng = new Random();
-                int randomnumber;
-                int middle = 0;
-                int remainder = 0;
+            string encode = Console.ReadLine();
+            string encode3 = encode.ToLower();
+            int length_of_encode = encode3.Length;
+            char[] encode2 = encode3.ToCharArray();
+            Random rng = new Random();
+            int randomnumber;
+            int middle = 0;
+            int remainder = 0;
 
-                StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
 
-                for (int i = 0; i < length_of_encode; i++)
+            for (int i = 0; i < length_of_encode; i++)
+            {
+                randomnumber = rng.Next(1, 9);
+                switch (encode2[i])
                 {
-                    randomnumber = rng.Next(1, 9);
-                    switch (encode2[i])
-                    {
-                        case 'a':
-                            middle = (27 + i - 1) / randomnumber;
-                            remainder = (27 + i - 1) % randomnumber;
-                            break;
-                        case 'b':
-                            middle = (27 + i - 2) / randomnumber;
-                            remainder = (27 + i - 2) % randomnumber;
-                            break;
-                        case 'c':
-                            middle = (27 + i - 3) / randomnumber;
-                            remainder = (27 + i - 3) % randomnumber;
-                            break;
-                        case 'd':
-                            remainder = (27 + i - 4) % randomnumber;
-                            middle = (27 + i - 4) / randomnumber;
-                            break;
-                        case 'e':
-                            middle = (27 + i - 5) / randomnumber;
-                            remainder = (27 + i - 5) % randomnumber;
-                            break;
-                        case 'f':
-                            middle = (27 + i - 6) / randomnumber;
-                            remainder = (27 + i - 6) % randomnumber;
-                            break;
-                        case 'g':
-                            remainder = (27 + i - 7) % randomnumber;
-                            middle = (27 + i - 7) / randomnumber;
-                            break;
-                        case 'h':
-                            remainder = (27 + i - 8) % randomnumber;
-                            middle = (27 + i - 8) / randomnumber;
-                            break;
-                        case 'i':
-                            remainder = (27 + i - 9) % randomnumber;
-                            middle = (27 + i - 9) / randomnumber;
-                            break;
-                        case 'j':
-                            remainder = (27 + i - 10) % randomnumber;
-                            middle = (27 + i - 10) / randomnumber;
-                            break;
-                        case 'k':
-                            remainder = (27 + i - 11) % randomnumber;
-                            middle = (27 + i - 11) / randomnumber;
-                            break;
-                        case 'l':
-                            remainder = (27 + i - 12) % randomnumber;
-                            middle = (27 + i - 12) / randomnumber;
-                            break;
-                        case 'm':
-                            remainder = (27 + i - 13) % randomnumber;
-                            middle = (27 + i - 13) / randomnumber;
-                            break;
-                        case 'n':
-                            remainder = (27 + i - 14) % randomnumber;
-                            middle = (27 + i - 14) / randomnumber;
-                            break;
-                        case 'o':
-                            remainder = (27 + i - 15) % randomnumber;
-                            middle = (27 + i - 15) / randomnumber;
-                            break;
-                        case 'p':
-                            remainder = (27 + i - 16) % randomnumber;
-                            middle = ((27 + i) - 16) / randomnumber;
-                            break;
-                        case 'q':
-                            middle = ((27 + i) - 17) / randomnumber;
-                            remainder = (27 + i - 17) % randomnumber;
+                    case 'a':
+                        middle = (27 + i - 1) / randomnumber;
+                        remainder = (27 + i - 1) % randomnumber;
+                        break;
+                    case 'b':
+                        middle = (27 + i - 2) / randomnumber;
+                        remainder = (27 + i - 2) % randomnumber;
+                        break;
+                    case 'c':
+                        middle = (27 + i - 3) / randomnumber;
+                        remainder = (27 + i - 3) % randomnumber;
+                        break;
+                    case 'd':
+                        remainder = (27 + i - 4) % randomnumber;
+                        middle = (27 + i - 4) / randomnumber;
+                        break;
+                    case 'e':
+                        middle = (27 + i - 5) / randomnumber;
+                        remainder = (27 + i - 5) % randomnumber;
+                        break;
+                    case 'f':
+                        middle = (27 + i - 6) / randomnumber;
+                        remainder = (27 + i - 6) % randomnumber;
+                        break;
+                    case 'g':
+                        remainder = (27 + i - 7) % randomnumber;
+                        middle = (27 + i - 7) / randomnumber;
+                        break;
+                    case 'h':
+                        remainder = (27 + i - 8) % randomnumber;
+                        middle = (27 + i - 8) / randomnumber;
+                        break;
+                    case 'i':
+                        remainder = (27 + i - 9) % randomnumber;
+                        middle = (27 + i - 9) / randomnumber;
+                        break;
+                    case 'j':
+                        remainder = (27 + i - 10) % randomnumber;
+                        middle = (27 + i - 10) / randomnumber;
+                        break;
+                    case 'k':
+                        remainder = (27 + i - 11) % randomnumber;
+                        middle = (27 + i - 11) / randomnumber;
+                        break;
+                    case 'l':
+                        remainder = (27 + i - 12) % randomnumber;
+                        middle = (27 + i - 12) / randomnumber;
+                        break;
+                    case 'm':
+                        remainder = (27 + i - 13) % randomnumber;
+                        middle = (27 + i - 13) / randomnumber;
+                        break;
+                    case 'n':
+                        remainder = (27 + i - 14) % randomnumber;
+                        middle = (27 + i - 14) / randomnumber;
+                        break;
+                    case 'o':
+                        remainder = (27 + i - 15) % randomnumber;
+                        middle = (27 + i - 15) / randomnumber;
+                        break;
+                    case 'p':
+                        remainder = (27 + i - 16) % randomnumber;
+                        middle = ((27 + i) - 16) / randomnumber;
+                        break;
+                    case 'q':
+                        middle = ((27 + i) - 17) / randomnumber;
+                        remainder = (27 + i - 17) % randomnumber;
 
-                            break;
-                        case 'r':
-                            middle = ((27 + i) - 18) / randomnumber;
-                            remainder = (27 + i - 18) % randomnumber;
-                            break;
-                        case 's':
-                            middle = ((27 + i) - 19) / randomnumber;
-                            remainder = (27 + i - 19) % randomnumber;
-                            break;
-                        case 't':
-                            middle = ((27 + i) - 20) / randomnumber;
-                            remainder = (27 + i - 20) % randomnumber;
-                            break;
-                        case 'u':
-                            middle = ((27 + i) - 21) / randomnumber;
-                            remainder = (27 + i - 21) % randomnumber;
-                            break;
-                        case 'v':
-                            middle = ((27 + i) - 22) / randomnumber;
-                            remainder = (27 + i - 22) % randomnumber;
-                            break;
-                        case 'w':
-                            middle = ((27 + i) - 23) / randomnumber;
-                            remainder = (27 + i - 23) % randomnumber;
-                            break;
-                        case 'x':
-                            middle = ((27 + i) - 24) / randomnumber;
-                            remainder = (27 + i - 25) % randomnumber;
-                            break;
-                        case 'y':
-                            remainder = (27 + i - 25) % randomnumber;
-                            middle = ((27 + i) - 25) / randomnumber;
-                            break;
-                        case 'z':
-                            remainder = (27 + i - 26) % randomnumber;
-                            middle = ((27 + i) - 26) / randomnumber;
-                            break;
+                        break;
+                    case 'r':
+                        middle = ((27 + i) - 18) / randomnumber;
+                        remainder = (27 + i - 18) % randomnumber;
+                        break;
+                    case 's':
+                        middle = ((27 + i) - 19) / randomnumber;
+                        remainder = (27 + i - 19) % randomnumber;
+                        break;
+                    case 't':
+                        middle = ((27 + i) - 20) / randomnumber;
+                        remainder = (27 + i - 20) % randomnumber;
+                        break;
+                    case 'u':
+                        middle = ((27 + i) - 21) / randomnumber;
+                        remainder = (27 + i - 21) % randomnumber;
+                        break;
+                    case 'v':
+                        middle = ((27 + i) - 22) / randomnumber;
+                        remainder = (27 + i - 22) % randomnumber;
+                        break;
+                    case 'w':
+                        middle = ((27 + i) - 23) / randomnumber;
+                        remainder = (27 + i - 23) % randomnumber;
+                        break;
+                    case 'x':
+                        middle = ((27 + i) - 24) / randomnumber;
+                        remainder = (27 + i - 25) % randomnumber;
+                        break;
+                    case 'y':
+                        remainder = (27 + i - 25) % randomnumber;
+                        middle = ((27 + i) - 25) / randomnumber;
+                        break;
+                    case 'z':
+                        remainder = (27 + i - 26) % randomnumber;
+                        middle = ((27 + i) - 26) / randomnumber;
+                        break;
 
 
-                    }
-                    sb.Append(randomnumber);
-                    sb.Append(Converter(middle));
-                    sb.Append(remainder);
-                    //sb.Append(' ');
                 }
+                sb.Append(randomnumber);
+                sb.Append(Converter(middle));
+                sb.Append(remainder);
+                //sb.Append(' ');
+            }
 
-                return sb;
+            return sb;
+
+        }
+        static void Main(string[] args)
+        {
+        menu:
+            Console.WriteLine("Hello! to encode- press 1, to decoded press 2");
+            int response = int.Parse(Console.ReadLine());
+            if (response == 1)
+            {
+                Console.WriteLine(Encoder(response));
+                goto menu;
+            }
+            else if (response == 2)
+            {
+                Console.WriteLine(Decoder(response));
+                goto menu;
 
             }
-            static object Decoder(int n = 2)
+            else
             {
-
-                Console.WriteLine("what is the sentence you want to decode");
-
-                string decode = Console.ReadLine();
-                string decodersplit = " ";
-                char[] therealthing = { ' ' };
-                int masti = 0;
-                int masti2 = 0;
-                int masti3 = 0;
-                int helper2 = 0;
-                int helper = 0;
-                char namaste = ' ';
-                StringBuilder sb2 = new StringBuilder();
-                for (int i = 0; i < decode.Length; i++)
-                {
-                    decodersplit = decode.Substring(helper, 3);
-                    therealthing = decodersplit.ToCharArray();
-                    masti = Converter2(therealthing[2]);
-                    masti2 = therealthing[1];
-                    masti3 = therealthing[3];
-                    helper2 = masti * masti2 + masti3;
-                    namaste = Converter(27 + i - helper2);
-                    sb2.Append(namaste);
-                    helper += 3;
-                }
-                return sb2;
-            }
-            static void Main(string[] args)
-            {
-            menu:
-                Console.WriteLine("Hello! to encode- press 1, to decoded press 2");
-                int response = int.Parse(Console.ReadLine());
-                if (response == 1)
-                {
-                    Console.WriteLine(Encoder(response));
-                    goto menu;
-                }
-                else if (response == 2)
-                {
-                    Console.WriteLine(Decoder(response));
-                    goto menu;
-
-                }
-                else
-                {
-                    Console.WriteLine("invalid input");
-                }
+                Console.WriteLine("invalid input");
             }
         }
     }
